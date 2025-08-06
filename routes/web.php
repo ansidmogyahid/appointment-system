@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
+use App\Livewire\Dashboard;
 use App\Livewire\UserManagement\Index as UserManagementIndex;
 use App\Livewire\UserManagement\Create as UserManagementCreate;
 use App\Livewire\UserManagement\Edit as UserManagementEdit;
@@ -20,7 +22,7 @@ Route::middleware('auth')->group(function () {
 
     Route::middleware('verified')->group(function(){
         // Dashboard
-        Route::get('/dashboard', fn () => view('dashboard'))->name('dashboard');
+        Route::get('dashboard', Dashboard::class)->name('dashboard');
 
         // Users Management
         Route::get('users-management', UserManagementIndex::class)->name('user-management.index');
