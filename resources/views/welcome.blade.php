@@ -14,6 +14,8 @@
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         @endif
+
+        <script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
     </head>
     <body class="bg-cover bg-center min-h-screen" style="background-image: url('/images/landing-bg.jpg')">
 
@@ -39,9 +41,13 @@
         <!-- Hero Section with Images on Right -->
         @include('landing.hero')
 
-        <!-- Services -->    
-        <!-- About -->    
-        <!-- Barbers -->    
+        <!-- Services --> 
+        @include('landing.services')
 
+        <!-- About -->    
+        @include('landing.about')
+
+        <!-- Barbers -->    
+        @include('landing.barbers')
     </body>
 </html>

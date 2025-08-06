@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
+use App\Livewire\AppointmentBooking;
 use App\Livewire\Dashboard;
 use App\Livewire\UserManagement\Index as UserManagementIndex;
 use App\Livewire\UserManagement\Create as UserManagementCreate;
@@ -11,9 +12,8 @@ use App\Livewire\Services\Create as ServiceCreate;
 use App\Livewire\Services\Edit as ServiceEdit;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', fn () => view('welcome'))->name('welcome');
+Route::get('/book-appointment', AppointmentBooking::class)->name('book-appointment');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

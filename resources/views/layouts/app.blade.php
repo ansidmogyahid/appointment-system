@@ -42,6 +42,8 @@
             {{ $slot }}
         </main>
 
+        @stack('alpine-scripts')
+
         @livewireScriptConfig 
         
         @if (session()->has('success'))
