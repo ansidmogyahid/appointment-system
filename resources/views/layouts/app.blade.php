@@ -15,27 +15,8 @@
         @livewireStyles
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    {{-- <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
 
-            <!-- Page Heading -->
-            @isset($header)
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endisset
-
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
-        </div>
-    </body> --}}
-
-    <body class="flex h-screen">
+    <body class="flex h-screen relative">
         <!-- Sidebar -->
         <aside class="w-64 bg-[#b48a6d] text-white flex flex-col items-center py-6">
             <div class="mb-8">
@@ -44,7 +25,7 @@
             <nav class="flex flex-col space-y-2 w-full pl-4">
                 <a href="{{ route('dashboard') }}" class="bg-[#f5e3b4] text-black py-2 px-4 rounded font-semibold text-left">Dashboard</a>
                 <a href="{{ route('user-management.index') }}" class="bg-[#f5e3b4] text-black py-2 px-4 rounded font-semibold text-left">Users Management</a>
-                <a href="#" class="bg-[#f5e3b4] text-black py-2 px-4 rounded font-semibold text-left">Services</a>
+                <a href="{{ route('services.index') }}" class="bg-[#f5e3b4] text-black py-2 px-4 rounded font-semibold text-left">Services</a>
                 <a href="#" class="bg-[#f5e3b4] text-black py-2 px-4 rounded font-semibold text-left">Schedules</a>
                 <a href="#" class="bg-[#f5e3b4] text-black py-2 px-4 rounded font-semibold text-left">Appointments</a>
                 <a href="#" class="bg-[#f5e3b4] text-black py-2 px-4 rounded font-semibold text-left">Notifications</a>
@@ -60,6 +41,18 @@
             {{ $slot }}
         </main>
 
-        @livewireScripts
+        @livewireScriptConfig 
+        
+        @if (session()->has('success'))
+            <div 
+                x-data="{ show: true }" 
+                x-init="setTimeout(() => show = false, 5000)" 
+                x-show="show" 
+                x-transition
+                class="bg-green-100 absolute bottom-2 right-2 text-green-800 p-4 rounded mb-4"
+            >
+                {{ session('success') }}
+            </div>
+        @endif
     </body>
 </html>

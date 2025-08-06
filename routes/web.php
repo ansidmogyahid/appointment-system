@@ -1,7 +1,11 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\UserManagementController;
+use App\Livewire\UserManagement\Index as UserManagementIndex;
+use App\Livewire\UserManagement\Create as UserManagementCreate;
+use App\Livewire\UserManagement\Edit as UserManagementEdit;
+use App\Livewire\Services\Index as ServiceIndex;
+use App\Livewire\Services\Create as ServiceCreate;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,7 +22,14 @@ Route::middleware('auth')->group(function () {
         Route::get('/dashboard', fn () => view('dashboard'))->name('dashboard');
 
         // Users Management
-        Route::resource('users-management', UserManagementController::class)->names('user-management');
+        Route::get('users-management', UserManagementIndex::class)->name('user-management.index');
+        Route::get('users-management/create', UserManagementCreate::class)->name('user-management.create');
+        Route::get('users-management/{id}/edit', UserManagementEdit::class)->name('user-management.edit');
+
+        // Services
+        // Route::resource('services', ServicesController::class)->names('services');
+        Route::get('services', ServiceIndex::class)->name('services.index');
+        Route::get('services/create', ServiceCreate::class)->name('services.create');
     });
 
 });
