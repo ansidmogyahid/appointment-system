@@ -4,10 +4,12 @@
     <h2 class="text-xl font-bold text-gray-800">{{ $title }}</h2>
     <div class="flex items-center gap-4">
         <span class="font-semibold text-gray-700">Welcome: {{ $user }}</span>
-        <a 
-            ref="{{ route('logout') }}" 
-            onclick="event.preventDefault(); document.getElementById('logout-form').submit();" 
-            class="border border-gray-700 text-gray-700 px-4 py-1 cursor-pointer rounded hover:bg-gray-200">Logout
-        </a>
+        <form method="POST" action="{{ route('logout') }}" style="display: inline;">
+            @csrf
+            <button type="submit" 
+                    class="border border-gray-700 text-gray-700 px-4 py-1 cursor-pointer rounded hover:bg-gray-200">
+                Logout
+            </button>
+        </form>
     </div>
 </div>
