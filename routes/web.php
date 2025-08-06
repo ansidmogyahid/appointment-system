@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserManagementController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -17,7 +18,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/dashboard', fn () => view('dashboard'))->name('dashboard');
 
         // Users Management
-        Route::get('/users-management', fn() => view('dashboard.users-management.index'))->name('users-management');
+        Route::resource('users-management', UserManagementController::class)->names('user-management');
     });
 
 });

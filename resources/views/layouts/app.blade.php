@@ -12,6 +12,7 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <!-- Scripts -->
+        @livewireStyles
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     {{-- <body class="font-sans antialiased">
@@ -42,7 +43,7 @@
             </div>
             <nav class="flex flex-col space-y-2 w-full pl-4">
                 <a href="{{ route('dashboard') }}" class="bg-[#f5e3b4] text-black py-2 px-4 rounded font-semibold text-left">Dashboard</a>
-                <a href="{{ route('users-management') }}" class="bg-[#f5e3b4] text-black py-2 px-4 rounded font-semibold text-left">Users Management</a>
+                <a href="{{ route('user-management.index') }}" class="bg-[#f5e3b4] text-black py-2 px-4 rounded font-semibold text-left">Users Management</a>
                 <a href="#" class="bg-[#f5e3b4] text-black py-2 px-4 rounded font-semibold text-left">Services</a>
                 <a href="#" class="bg-[#f5e3b4] text-black py-2 px-4 rounded font-semibold text-left">Schedules</a>
                 <a href="#" class="bg-[#f5e3b4] text-black py-2 px-4 rounded font-semibold text-left">Appointments</a>
@@ -58,5 +59,7 @@
 
             {{ $slot }}
         </main>
+
+        @livewireScripts
     </body>
 </html>
