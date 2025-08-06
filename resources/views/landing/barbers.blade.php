@@ -40,9 +40,9 @@
             <p class="text-sm text-gray-600 mb-4">
               Skilled and dedicated barber specializing in clean cuts, smooth shaves, and personalized styles. Focused on delivering quality service and customer satisfaction every time.
             </p>
-            <button class="border border-gray-400 px-4 py-1 text-sm rounded hover:bg-gray-100 transition">
+            <a href="{{ route('book-appointment') }}" class="border border-gray-400 px-4 py-1 text-sm rounded hover:bg-gray-100 transition">
               Book
-            </button>
+            </a>
           </div>
         </div>
 
@@ -55,9 +55,9 @@
             <p class="text-sm text-gray-600 mb-4">
               Skilled and dedicated barber specializing in clean cuts, smooth shaves, and personalized styles. Focused on delivering quality service and customer satisfaction every time.
             </p>
-            <button class="border border-gray-400 px-4 py-1 text-sm rounded hover:bg-gray-100 transition">
+            <a href="{{ route('book-appointment') }}" class="border border-gray-400 px-4 py-1 text-sm rounded hover:bg-gray-100 transition">
               Book
-            </button>
+            </a>
           </div>
         </div>
 
@@ -70,9 +70,9 @@
             <p class="text-sm text-gray-600 mb-4">
               Skilled and dedicated barber specializing in clean cuts, smooth shaves, and personalized styles. Focused on delivering quality service and customer satisfaction every time.
             </p>
-            <button class="border border-gray-400 px-4 py-1 text-sm rounded hover:bg-gray-100 transition">
+            <a href="{{ route('book-appointment') }}" class="border border-gray-400 px-4 py-1 text-sm rounded hover:bg-gray-100 transition">
               Book
-            </button>
+            </a>
           </div>
         </div>
       </div>

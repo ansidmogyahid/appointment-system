@@ -37,7 +37,7 @@
 
       <!-- Button -->
       <div class="mt-5">
-        <a href="#"
+        <a href="{{ route('book-appointment') }}"
            class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold text-lg px-6 py-3 rounded transition">
           Book an Appointment
         </a>

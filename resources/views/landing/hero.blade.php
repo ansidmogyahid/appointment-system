@@ -7,9 +7,11 @@
             <p class="mt-6 text-sm md:text-base max-w-xl">
             "At Mr. Swabeer Barber Shop, every haircut is more than just grooming. It's a statement of style, confidence, and individuality. Our barbers take pride in precision, attention to detail, and creating a look that makes you feel sharp, fresh, and empowered. Whether it’s a classic cut or a modern style, we’re here to help you look your best and feel even better."
             </p>
-            <button class="mt-6 bg-amber-400 hover:bg-amber-500 text-white font-semibold px-6 py-3 rounded shadow">
-            Book an Appointment
-            </button>
+            <div class="mt-10">
+                <a href="{{ route('book-appointment') }}" class="mt-10 bg-amber-400 hover:bg-amber-500 text-white font-semibold px-6 py-3 rounded shadow">
+                    Book an Appointment
+                </a>
+            </div>
         </div>
 
         <!-- Barber Images Section -->

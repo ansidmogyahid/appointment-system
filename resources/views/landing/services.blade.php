@@ -17,9 +17,9 @@
       <p class="text-sm text-gray-600 mb-4">
         Experience the art of a traditional shave with a modern touch. We use warm lather, sharp blades, and soothing aftercare to give you a smooth, clean finish.
       </p>
-      <button class="border border-gray-400 px-4 py-1 text-sm rounded hover:bg-gray-100 transition">
+      <a href="{{ route('book-appointment') }}" class="border border-gray-400 px-4 py-1 text-sm rounded hover:bg-gray-100 transition">
         Book
-      </button>
+      </a>
     </div>
 
     <!-- Haircut Card -->
@@ -30,9 +30,9 @@
       <p class="text-sm text-gray-600 mb-4">
         At Mr. Swabeer Barber Shop, our haircuts are more than just a trim — they’re tailored to your unique style and personality.
       </p>
-      <button class="border border-gray-400 px-4 py-1 text-sm rounded hover:bg-gray-100 transition">
+      <a href="{{ route('book-appointment') }}" class="border border-gray-400 px-4 py-1 text-sm rounded hover:bg-gray-100 transition">
         Book
-      </button>
+      </a>
     </div>
 
     <!-- Hair Color Card -->
@@ -43,9 +43,9 @@
       <p class="text-sm text-gray-600 mb-4">
         Looking to enhance your natural tone or try something new? Our hair coloring services are designed to match your style and personality.
       </p>
-      <button class="border border-gray-400 px-4 py-1 text-sm rounded hover:bg-gray-100 transition">
+      <a href="{{ route('book-appointment') }}" class="border border-gray-400 px-4 py-1 text-sm rounded hover:bg-gray-100 transition">
         Book
-      </button>
+      </a>
     </div>
   </div>
 </section>
