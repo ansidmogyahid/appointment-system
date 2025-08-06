@@ -11,6 +11,7 @@ These steps guide you from **scratch** (no existing Laravel setup) to running Ea
 
 2. **Install PHP 8.3**
 
+    - Download and install [https://herd.laravel.com/windows](https://herd.laravel.com/windows)
     - Laravel Herd bundles PHP 8.3+ internally, so no separate PHP install is needed if you use Herd.
 
 3. **Install Composer** (PHP dependency manager)
