@@ -6,6 +6,7 @@ use App\Livewire\UserManagement\Create as UserManagementCreate;
 use App\Livewire\UserManagement\Edit as UserManagementEdit;
 use App\Livewire\Services\Index as ServiceIndex;
 use App\Livewire\Services\Create as ServiceCreate;
+use App\Livewire\Services\Edit as ServiceEdit;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -30,6 +31,7 @@ Route::middleware('auth')->group(function () {
         // Route::resource('services', ServicesController::class)->names('services');
         Route::get('services', ServiceIndex::class)->name('services.index');
         Route::get('services/create', ServiceCreate::class)->name('services.create');
+        Route::get('services/{id}/edit', ServiceEdit::class)->name('services.edit');
     });
 
 });

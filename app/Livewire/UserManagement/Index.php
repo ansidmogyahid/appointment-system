@@ -40,10 +40,6 @@ class Index extends Component
         }
     }
 
-    public function showEdit($userId){
-        
-    }
-
     public function mount(){
         $this->users = User::all();
     }
