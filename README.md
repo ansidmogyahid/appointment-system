@@ -47,21 +47,23 @@ These steps guide you from **scratch** (no existing Laravel setup) to running Ea
 ```bash
 # 1. Clone the repository
 git clone https://github.com/ansidmogyahid/appointment-system.git # change this
-cd easycut
 
-# 2. Install PHP dependencies
+# 2. Go to the cloned project
+cd appointment-system # change the name based on the step 1
+
+# 3. Install PHP dependencies
 composer install
 
-# 3. Install JS dependencies and build assets
+# 4. Install JS dependencies and build assets
 npm install && npm run build
 
-# 4. Set up environment file
+# 5. Set up environment file
 cp .env.example .env
 php artisan key:generate
 
-# 5. Configure .env
+# 6. Configure .env
 # (Edit DB credentials, mail driver, etc.)
 
-# 6. Run migrations and seeders
+# 7. Run migrations and seeders
 php artisan migrate --seed
 ```
